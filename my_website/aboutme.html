@@ -6,108 +6,181 @@
 	    
 	    
 	    <style> 
+	    
+	    
+	    body{color:black;}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+     
 	    body{background:#bfbfbf;}
 	    h1{color:red;}
 	    p{color:green;}
 	    p{font-style: italic;}
 	    
 	    
+	    #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
 	    </style>
 	  </head>
 	  <body>
-<ul>
-	<li><a href="#About me">About me</a></li>
-	<li><a href="#Food I Like">Food I like</a></li>
-	<li><a href="#schedule">My Schedule</a></li>
-	
-	
-</ul>	      
+	      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	      
-	      
-	     <h1 id="About me">
-	         
-	 <strong>About ME</strong>
-	     </h1>
-    <p style="font-size:30px">
-        My name is Ayomide Lawal but you can call me <em>AYO</em> just like the popular song by <a href="https://www.youtube.com/watch?v=Gxkl0YZ116I" target="_blank">chris brown</a> as a matter of fact <strong>you must call me Ayo</strong>.
-    </p>
-    <p id="Food I Like" style="font-size:30px">
-        I like mexican food a lot there is not a thing i dont like about mexican food especially<a href="https://www.google.com/imgres?imgurl=http%3A%2F%2Fimg.sndimg.com%2Ffood%2Fimage%2Fupload%2Fh_465%2Cw_620%2Cc_fit%2Fv1%2Fimg%2Frecipes%2F60%2F71%2F4%2FGidRq10yRvmCa76hJBkD_burrito4.jpg&imgrefurl=http%3A%2F%2Fwww.food.com%2Frecipe%2Fshirls-awesome-easy-burritos-60714&docid=tW4BaBHxftnaLM&tbnid=Sgtrd7bgxy5RsM%3A&vet=10ahUKEwiwn8a544TWAhXFjVQKHdeQBhMQMwjSASgDMAM..i&w=620&h=413&safe=strict&bih=613&biw=1366&q=burritos&ved=0ahUKEwiwn8a544TWAhXFjVQKHdeQBhMQMwjSASgDMAM&iact=mrc&uact=8" target="balnk_">Burritos</a>
-    </p>
-	  
-	  <img src="images/images.jpg" width="400" height="400">
-	  
-	 <p style="font-size:30px">To Check out my other beautiful art just click on these links my dude <a href="index.html" target="_blank">Index</a>
-and <a href="portfolio.html" target="_blank">Portfolio</a>
-	 
-	 </p>
-	 <p id="schedule">
-	 Below is a description of my schedule
-	 </p>
-	 
-	 <table align="left">
-	 	<thead>
-  <tr>
-    <th>Period</th>
-   
-  </tr>
+	  	 <div id="main">
   
-  </thead>
- <tbody>
- 	<tr>
- 	<th>1</th>
- 	<td>AP Success</td>
- 	
- 	</tr>
- 	<tr>
- 		<th>
- 			2
- 		</th>
- 		<td>
- 			AP Gov
- 		</td>
- 	</tr>
- 	<tr>
- 		<th>3</th>
- 		<td>
- 		Spanish 3
- 		</td>
- 	</tr>
- 	<tr>
- 		<th>4</th>
- 		<td>
- 			AP Physics
- 		</td>
- 	</tr>
- 	<tr>
- 		<th>5</th>
- 		<td>
- 			AP Calculus
- 		</td>
- 	</tr>
- 	<tr>
- 		<th>6</th>
- 		<td>
- 			Computer Science
- 		</td>
- 	</tr>
- 	
- 		<tr>
- 		<th>7</th>
- 		<td>
- 			CSU Expository
- 		</td>
- 	</tr>
- 		<tr>
- 		<th>8</th>
- 		<td>
- 			Economics
- 		</td>
- 	</tr>
- 
- </td>
- </tbody>
-</table>
+
+     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+</div>
+   
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html" target="blank_">Home</a>
+  <a href="portfolio.html" target="blank_">Portfolio</a>
+<ul>
+
+	<li><a href="#food">Food I like</a></li>
+	
+	</div>
+	</ul>
+	
+	<h2>Hello, as you may have already seen from my home page that my name is AYO</h2>
+	<h2>Well, I go to Lawndale High School and I am a senior at Lawndale High School, I am 5'7 and 115 pounds which is kinda really small</h2>
+	<h2>
+	    I take computer science class which is why I have this website in the first place, and more like I LOVE coding<br>
+	    like my whole life and essence is coding. Bro dont talk to me if you don't code bruh.
+	   
+	</h2>
+	<h2>
+		I <strong>LOVE</strong> to eat a lot even if there is the standing fact that I am quite little.<br> But like not so little I'm a little big even though I'm the oonly one that thinks so.
+		<br>Well my favorite food is hispanic foods like Carne Asadas, Burritos and last but not least Tacos hmmmmmm.
+	</h2>
+	<h2>
+		I love to eat Carne Asada's from El tarasco, even if everybody says their food is trash, I dont know why but i just love the sweet smell and the juicy taste, and dont even get me started on the after taste of it.
+	</h2>
+	
+	<img src="https://az616578.vo.msecnd.net/files/2016/02/27/635921954791773396988660928_6-carne-asada-fries-eric-molina.jpg" id="food"><img src="http://www.vegkitchen.com/wp-content/uploads/2017/01/Vegan-carne-asada-fries3.jpg"><img src="https://www.tacobueno.com/assets/food/burritos/Burrito_BOB_990x725.jpg?v=1"><img src="https://images-gmi-pmc.edge-generalmills.com/3f2a43ee-fbec-46bc-b26a-0e6f64d85a41.jpg"><img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/11/14/2/fnm_120113-slow-cooker-turkey-mole-tacos-recipe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1385046340837.jpeg"><img src="https://media-cdn.tripadvisor.com/media/photo-s/02/e1/9b/54/usa-cowboy-tacos.jpg">
+	
+	
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<script>
+
+  
+        function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+        
+         // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+       
+</script>
 	  </body>
 	  
 	</html>
